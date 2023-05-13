@@ -1,6 +1,5 @@
 import QrScanner from "react-qr-scanner";
-import { useToast } from "@chakra-ui/react";
-import { useState } from "react";
+import { useToast, Box } from "@chakra-ui/react";
 
 export default function CameraScanner() {
   const toast = useToast();
@@ -24,7 +23,13 @@ export default function CameraScanner() {
   };
 
   return (
-    <div>
+    <Box
+      w="90%"
+      h="90%"
+      bg="gray.100"
+      border="1px solid black"
+      borderRadius="3px"
+    >
       <QrScanner
         onError={handleError}
         onScan={handleScan}
@@ -33,6 +38,6 @@ export default function CameraScanner() {
           toast(toastProps);
         }}
       />
-    </div>
+    </Box>
   );
 }

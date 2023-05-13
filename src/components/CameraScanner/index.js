@@ -12,11 +12,11 @@ function CameraScanner() {
   };
 
   return (
-    <Stack direction="column" spacing={4}>
+    <Stack direction="column" spacing={4} align={"center"}>
       <div>
         <CameraButton onClick={handleClick} />
       </div>
-      <div>{cameraOpen && <CameraScan />}</div>
+      {cameraOpen && <CameraScan />}
     </Stack>
   );
 }
