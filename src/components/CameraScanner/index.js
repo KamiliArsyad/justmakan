@@ -1,5 +1,6 @@
 import CameraButton from "./CameraButton";
 import CameraScan from "./CameraScan";
+import { Stack, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
 function CameraScanner() {
@@ -7,16 +8,16 @@ function CameraScanner() {
   const [cameraOpen, setCameraOpen] = useState(false);
 
   const handleClick = () => {
-    setCameraOpen(prev => !prev);
+    setCameraOpen((prev) => !prev);
   };
 
   return (
-    <div>
-      <CameraButton onClick={handleClick} />
+    <Stack direction="column" spacing={4}>
       <div>
-        {cameraOpen && <CameraScan />}
+        <CameraButton onClick={handleClick} />
       </div>
-    </div>
+      <div>{cameraOpen && <CameraScan />}</div>
+    </Stack>
   );
 }
 
