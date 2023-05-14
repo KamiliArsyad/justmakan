@@ -13,13 +13,13 @@ export default function Points() {
   return (
     <>
       <Stack direction="column" spacing={-4} align="center">
-        <Container bg="brand.300" minH="160" align="left" minWidth='full' >
+        <Container bg="brand.100" minH="160" align="left">
           <Stack direction="row" spacing={10} margin="5" align="left">
-            <Stack direction="column" spacing={-3} align="left">
-              <Heading size='lg' color="gray.200">
+            <Stack direction="column" align="left" mb="7">
+              <Heading size="md" color="gray.100" mt="5">
                 hello,
               </Heading>
-              <Heading size='2xl' color="white">
+              <Heading size="xl" w="60%" color="white" lineHeight="120%">
                 Nancy
               </Heading>
               <br />
