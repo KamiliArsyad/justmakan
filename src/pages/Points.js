@@ -12,16 +12,18 @@ import {
 export default function Points() {
   return (
     <>
-      <Stack direction="column" spacing={-5} align="center">
-        <Container bg="green.400" minH="160" align="left">
+      <Stack direction="column" spacing={-4} align="center">
+        <Container bg="green.400" minH="160" align="left" minWidth='full' >
           <Stack direction="row" spacing={10} margin="5" align="left">
-            <Stack direction="column" spacing={-2} align="left">
-              <Heading as="h3" color="gray.100">
+            <Stack direction="column" spacing={-3} align="left">
+              <Heading size='lg' color="gray.200">
                 hello,
               </Heading>
-              <Heading size="4xl" color="white">
-                Jason
+              <Heading size='2xl' color="white">
+                Nancy
               </Heading>
+              <br />
+              <Text color="gray.200">Let's have clean plates today too!</Text>
             </Stack>
           </Stack>
         </Container>
@@ -33,15 +35,15 @@ export default function Points() {
           h="700"
           align="center"
         >
-          <Card>
+          <Card maxW='500'>
             <CardHeader>
-              <Heading size="lg" color="gray.400">
+              <Heading size="xl" color="gray.400">
                 My Points
               </Heading>
             </CardHeader>
 
-            <CardBody>
-              <Stack direction="row" align="center">
+            <CardBody align='center'>
+              <Stack direction="row" align="center" justify='center' spacing='15'>
                 <Box>
                   <Text as='h5' color="gray.300">
                     My Points
