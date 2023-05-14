@@ -14,10 +14,9 @@ function App() {
 
   return (
     <>
-    {/* This is messed up since now the outlet will be on top of the scanner but itsok lol */}
-      <CameraScanner cameraOpen={cameraOpen} handleClick={handleClick} />
       <Outlet />
-      <Navbar handleCameraClick={handleClick} />
+      <CameraScanner cameraOpen={cameraOpen} handleClick={handleClick} />
+      <Navbar handleCameraClick={handleClick} cameraOpen={cameraOpen} />
     </>
   );
 }

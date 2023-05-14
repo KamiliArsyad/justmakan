@@ -9,6 +9,7 @@ import Explore from "./pages/Explore";
 import Rewards from "./pages/Rewards";
 import '@fontsource/inter/700.css'
 import '@fontsource/inter/400.css'
+import Scan from "./pages/Scan";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const theme = extendTheme({
@@ -17,6 +18,7 @@ const theme = extendTheme({
       100: "#488829",
       200: "#067655",
       300: "#FF894F",
+      400: "#294A88"
     },
   },  
   fonts: {
@@ -36,6 +38,7 @@ root.render(
             <Route path="points" element={<Points />} />
             <Route path="explore" element={<Explore />} />
             <Route path="rewards" element={<Rewards />} />
+            <Route path="scan" element={<Scan />} />
           </Route>
         </Routes>
       </ChakraProvider>
