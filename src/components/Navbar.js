@@ -7,7 +7,8 @@ import QrCodeScannerRoundedIcon from "@mui/icons-material/QrCodeScannerRounded";
 import CardGiftcardRoundedIcon from "@mui/icons-material/CardGiftcardRounded";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = (props) => {
+// Not good practice here but it's alright for a demo
+const Navbar = ({handleCameraClick, cameraOpen}) => {
   const bg = useColorModeValue("white", "gray.700");
   const border = useColorModeValue("gray.200", "gray.600");
   const darkBg = useColorModeValue("gray.700", "gray.900");
@@ -17,7 +18,15 @@ const Navbar = (props) => {
   const navigate = useNavigate();
 
   const handleLinkClick = (path) => {
+    if (cameraOpen) {
+      handleCameraClick();
+    }
     navigate(path);
+  };
+
+  const handleCameraLink = () => {
+    handleCameraClick();
+    navigate("/scan");
   };
 
   return (
@@ -70,7 +79,7 @@ const Navbar = (props) => {
         variant="ghost"
         color={textColor}
         _hover={{ bg: "gray.50" }}
-        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }} 
+        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
       >
         <ExploreIcon
           w="6"
@@ -93,7 +102,7 @@ const Navbar = (props) => {
           rounded="full"
           shadow="md"
           _hover={{ shadow: "lg" }}
-          onClick={props.handleCameraClick}
+          onClick={handleCameraLink}
         >
           <QrCodeScannerRoundedIcon w="10" h="10" style={{ color: "white" }} />
           <span className="sr-only">New item</span>
@@ -107,7 +116,7 @@ const Navbar = (props) => {
         variant="ghost"
         color={textColor}
         _hover={{ bg: "gray.50" }}
-        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }} 
+        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
         onClick={() => handleLinkClick("rewards")}
       >
         <CardGiftcardRoundedIcon

@@ -32,7 +32,7 @@ export default function Rewards() {
           align="center"
         >
           <Stack spacing="5">
-            <Card maxW="500">
+            <Card maxW="500" align='center'>
               <CardHeader>
                 <Heading size="md" color="gray.400">
                   My Points
@@ -44,6 +44,7 @@ export default function Rewards() {
                   <Heading size="3xl" color="black">
                     1200
                   </Heading>
+                  <Text color="blue.500">redeem now</Text>
                 </Box>
               </CardBody>
             </Card>
