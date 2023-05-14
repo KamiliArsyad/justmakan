@@ -3,7 +3,7 @@ import CameraScan from "./CameraScan";
 import { Stack, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
-function CameraScanner(props) {
+function ExplorePage(props) {
   return (
     <Stack direction="column" spacing={4} align={"center"}>
       {/* <div>
@@ -15,4 +15,4 @@ function CameraScanner(props) {
   );
 }
 
-export default CameraScanner;
+export default ExplorePage;

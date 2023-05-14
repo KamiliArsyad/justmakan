@@ -1,12 +1,11 @@
 import React from "react";
 import { Flex, Button, Tooltip, useColorModeValue } from "@chakra-ui/react";
-import HomeIcon from '@mui/icons-material/Home';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import SettingsIcon from '@mui/icons-material/Settings';
-import InfoIcon from '@mui/icons-material/Info';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import HomeIcon from "@mui/icons-material/Home";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ExploreIcon from "@mui/icons-material/Explore";
+import QrCodeScannerRoundedIcon from "@mui/icons-material/QrCodeScannerRounded";
+import CardGiftcardRoundedIcon from "@mui/icons-material/CardGiftcardRounded";
 import { useNavigate } from "react-router-dom";
-// import { Icon as ChakraIcon, HomeIcon, InfoIcon, AddIcon } from "@chakra-ui/react";
 
 const Navbar = (props) => {
   const bg = useColorModeValue("white", "gray.700");
@@ -75,7 +74,7 @@ const Navbar = (props) => {
         // Blank path (no path) for development purposes
         onClick={() => handleLinkClick("/")}
       >
-        <InfoIcon
+        <ExploreIcon
           w="6"
           h="6"
           mb="1"
@@ -91,28 +90,28 @@ const Navbar = (props) => {
       <Flex justify="center">
         <Button
           variant="solid"
-          colorScheme="blue"
+          bg="brand.300"
           size="lg"
           rounded="full"
           shadow="md"
           _hover={{ shadow: "lg" }}
           onClick={props.handleCameraClick}
         >
-          <CameraAltIcon w="6" h="6" color="white" />
+          <QrCodeScannerRoundedIcon w="10" h="10" style={{ color: "white" }} />
           <span className="sr-only">New item</span>
           <Tooltip label="New item" placement="top" hasArrow>
             <span />
           </Tooltip>
         </Button>
       </Flex>
-      
+
       <Button
         variant="ghost"
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
       >
-        <BarChartIcon
+        <CardGiftcardRoundedIcon
           w="6"
           h="6"
           mb="1"
@@ -125,7 +124,7 @@ const Navbar = (props) => {
           <span />
         </Tooltip>
       </Button>
-      
+
       <Button
         variant="ghost"
         color={textColor}
