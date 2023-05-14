@@ -5,6 +5,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ExploreIcon from "@mui/icons-material/Explore";
 import QrCodeScannerRoundedIcon from "@mui/icons-material/QrCodeScannerRounded";
 import CardGiftcardRoundedIcon from "@mui/icons-material/CardGiftcardRounded";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
   const bg = useColorModeValue("white", "gray.700");
@@ -13,6 +14,11 @@ const Navbar = (props) => {
   const darkBorder = useColorModeValue("gray.600", "gray.700");
   const textColor = useColorModeValue("gray.500", "gray.400");
   const darkTextColor = useColorModeValue("blue.600", "blue.500");
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+  };
 
   return (
     <Flex
@@ -45,6 +51,7 @@ const Navbar = (props) => {
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        onClick={() => handleLinkClick("points")}
       >
         <HomeIcon
           w="6"
@@ -64,6 +71,8 @@ const Navbar = (props) => {
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        // Blank path (no path) for development purposes
+        onClick={() => handleLinkClick("/")}
       >
         <ExploreIcon
           w="6"
