@@ -30,6 +30,7 @@ export default function CameraScanner() {
       bg="gray.100"
       border="1px solid black"
       borderRadius="3px"
+      delay={2000}
     >
       <QrScanner
         onError={handleError}
