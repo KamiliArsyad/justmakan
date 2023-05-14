@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Points from "./pages/Points";
+import Rewards from "./pages/Rewards";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
               works fine without any further coordination */}
           <Route path="/" element={<App />}>
             <Route path="points" element={<Points />} />
+            <Route path="rewards" element={<Rewards />} />
           </Route>
         </Routes>
       </ChakraProvider>
