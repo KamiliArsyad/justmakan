@@ -7,6 +7,8 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Points from "./pages/Points";
 import Explore from "./pages/Explore";
 import Rewards from "./pages/Rewards";
+import '@fontsource/inter/700.css'
+import '@fontsource/inter/400.css'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const theme = extendTheme({
@@ -16,6 +18,10 @@ const theme = extendTheme({
       200: "#067655",
       300: "#FF894F",
     },
+  },  
+  fonts: {
+    heading: `'Inter', sans-serif`,
+    body: `'Inter 400', sans-serif`,
   },
 });
 

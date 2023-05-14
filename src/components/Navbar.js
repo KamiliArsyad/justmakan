@@ -72,7 +72,7 @@ const Navbar = (props) => {
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
         // Blank path (no path) for development purposes
-        onClick={() => handleLinkClick("/")}
+        onClick={() => handleLinkClick("explore")}
       >
         <ExploreIcon
           w="6"
