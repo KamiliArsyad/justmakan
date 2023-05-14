@@ -10,6 +10,7 @@ export default function CameraScanner() {
     status: "success",
     duration: 3000,
     isClosable: true,
+    position: "top",
   };
 
   const handleScan = (data) => {

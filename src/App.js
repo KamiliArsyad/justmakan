@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import CameraScanner from "./components/CameraScanner";
 import Navbar from "./components/Navbar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   
@@ -13,7 +14,9 @@ function App() {
 
   return (
     <>
+    {/* This is messed up since now the outlet will be on top of the scanner but itsok lol */}
       <CameraScanner cameraOpen={cameraOpen} handleClick={handleClick} />
+      <Outlet />
       <Navbar handleCameraClick={handleClick} />
     </>
   );
