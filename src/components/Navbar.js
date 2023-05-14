@@ -70,9 +70,7 @@ const Navbar = (props) => {
         variant="ghost"
         color={textColor}
         _hover={{ bg: "gray.50" }}
-        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
-        // Blank path (no path) for development purposes
-        onClick={() => handleLinkClick("/")}
+        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }} 
       >
         <ExploreIcon
           w="6"
@@ -109,7 +107,8 @@ const Navbar = (props) => {
         variant="ghost"
         color={textColor}
         _hover={{ bg: "gray.50" }}
-        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }} 
+        onClick={() => handleLinkClick("rewards")}
       >
         <CardGiftcardRoundedIcon
           w="6"
@@ -130,6 +129,8 @@ const Navbar = (props) => {
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        // Blank path (no path) for development purposes
+        onClick={() => handleLinkClick("/")}
       >
         <SettingsIcon
           w="6"
