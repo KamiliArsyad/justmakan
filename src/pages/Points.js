@@ -13,7 +13,7 @@ export default function Points() {
   return (
     <>
       <Stack direction="column" spacing={-4} align="center">
-        <Container bg="brand.100" minH="160" align="left">
+        <Container bg="brand.100" minH="160" align="left" minWidth='full'>
           <Stack direction="row" spacing={10} margin="5" align="left">
             <Stack direction="column" align="left" mb="7">
               <Heading size="md" color="gray.100" mt="5">

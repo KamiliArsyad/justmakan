@@ -31,7 +31,7 @@ export default function Rewards() {
           h="700"
           align="center"
         >
-          <Stack spacing="5">
+          <Stack spacing="5" align='center'>
             <Card maxW="500" align='center'>
               <CardHeader>
                 <Heading size="md" color="gray.400">

@@ -17,7 +17,7 @@ export default function Explore() {
   return (
     <>
       <Stack direction="column" spacing={-5} align="center">
-        <Container bg="brand.100" minH="160" align="left">
+        <Container bg="brand.100" minH="160" align="left" minWidth='full'>
           <Stack direction="row" spacing={10} margin="5" align="left">
             <Stack direction="column" align="left" mb="7">
               <Heading size="xl" color="gray.100" mt="5">
