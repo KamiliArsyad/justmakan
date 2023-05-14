@@ -5,6 +5,7 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import { useNavigate } from "react-router-dom";
 // import { Icon as ChakraIcon, HomeIcon, InfoIcon, AddIcon } from "@chakra-ui/react";
 
 const Navbar = (props) => {
@@ -14,6 +15,11 @@ const Navbar = (props) => {
   const darkBorder = useColorModeValue("gray.600", "gray.700");
   const textColor = useColorModeValue("gray.500", "gray.400");
   const darkTextColor = useColorModeValue("blue.600", "blue.500");
+  const navigate = useNavigate();
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+  };
 
   return (
     <Flex
@@ -46,6 +52,7 @@ const Navbar = (props) => {
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        onClick={() => handleLinkClick("points")}
       >
         <HomeIcon
           w="6"
@@ -65,6 +72,8 @@ const Navbar = (props) => {
         color={textColor}
         _hover={{ bg: "gray.50" }}
         _dark={{ color: "whiteAlpha.800", _hover: { bg: "gray.800" } }}
+        // Blank path (no path) for development purposes
+        onClick={() => handleLinkClick("/")}
       >
         <InfoIcon
           w="6"
